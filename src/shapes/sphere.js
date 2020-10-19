@@ -14,8 +14,8 @@ function setUp(){
 }
 
 function createSphere(){
-  var geometry = new THREE.SphereGeometry(3, 50, 50, 0, Math.PI * 2, 0, Math.PI * 2);
-  var material = new THREE.MeshNormalMaterial();
+  var geometry = new THREE.SphereGeometry(3, 30, 30, 0, Math.PI * 2, 0, Math.PI * 2);
+  var material = new THREE.MeshBasicMaterial({color: 0xfffff, wireframe: true});
   sphere = new THREE.Mesh( geometry, material );
   scene.add( sphere );
 }
@@ -24,7 +24,8 @@ setUp()
 
 var render = function () {
     requestAnimationFrame(render);
-
+    sphere.rotation.x += 0.01
+    sphere.rotation.z += 0.02
     sphere.rotation.y += 0.01;
 
     renderer.render(scene, camera);
