@@ -1,4 +1,3 @@
-import * as THREE from "three/build/three.module"
 
 function setUp(){
   // create scene
