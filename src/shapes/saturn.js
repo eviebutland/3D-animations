@@ -47,8 +47,14 @@ function createRender(){
 
 function animation(){
   requestAnimationFrame(animation)
+  if(camera.position.y <= 20 && camera.position.z >5){
+    camera.position.y += 0.01
+  }
   largestRing.rotation.y += 0.01
   mediumRing.rotation.y += 0.01
   smallestRing.rotation.y += 0.01
+  largestRing.rotation.x = 1.7
+  mediumRing.rotation.x = 1.7
+  smallestRing.rotation.x = 1.7
   renderer.render(scene, camera); // this must always be in animation
 }

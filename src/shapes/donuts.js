@@ -40,7 +40,6 @@ let animation = function(){
   console.log(donuts)
   donuts.forEach(d => {
     d.position.y -= 0.1
-    console.log(d.position.y)
   })
 
   renderer.render(scene, camera)
